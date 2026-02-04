@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Friend Tracker",
+  "version": "1.0",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://leetcode.com/graphql"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+  "service_worker": "background.js"
+    }
+}

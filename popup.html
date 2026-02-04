@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div id="contestAlert" class="contest-card" style="display: none;">
+      <div class="contest-info">
+        <span class="contest-title" id="contestName">Upcoming Contest</span>
+        <span class="contest-time" id="contestCountdown">Loading...</span>
+      </div>
+      <a href="https://leetcode.com/contest/" target="_blank" class="register-btn">Register</a>
+    </div>
+
+    <div id="welcomeSection"></div>
+  </div>
+  
+  <div class="input-group">
+    <input type="text" id="friendId" placeholder="Friend's username">
+    <button id="addFriend">Add</button>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="searchFriends" placeholder="Search Friends...">
+    <select id="sortSelect">
+      <option value="none">Sort By</option>
+      <option value="solved">Most Solved</option>
+      <option value="rate">Acceptance %</option>
+      <option value="alpha">A-Z</option>
+    </select>
+  </div>
+
+  <div id="friendsList"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
