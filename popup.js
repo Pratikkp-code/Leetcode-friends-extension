@@ -20,7 +20,6 @@ async function renderMainUser() {
         if (newUser) chrome.storage.sync.set({ mainUser: newUser }, renderMainUser);
       };
     } else {
-      // This is the button that was appearing as "basic"
       welcomeSection.innerHTML = `<button id="setMainUser">Set Your LeetCode ID</button>`;
       
       document.getElementById('setMainUser').onclick = () => {
@@ -120,7 +119,6 @@ async function updateContestAlert() {
     console.log("Full Contest Response:", response);
 
     if (response?.success && response.data?.data?.topTwoContests) {
-      // Find the first contest that hasn't started yet
       const now = Math.floor(Date.now() / 1000);
       const nextContest = response.data.data.topTwoContests.find(c => c.startTime > now);
       
@@ -130,7 +128,7 @@ async function updateContestAlert() {
 
       if (nextContest && contestDiv) {
         nameEl.innerText = nextContest.title;
-        contestDiv.style.display = 'flex'; // Make it visible
+        contestDiv.style.display = 'flex';
 
         const startTime = nextContest.startTime * 1000;
 

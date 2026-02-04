@@ -130,8 +130,6 @@ button#addFriend {
 .register-btn:hover {
   transform: scale(1.05);
 }
-/* Add to your existing style.css */
-
 .contest-card {
   background: linear-gradient(90deg, #ffa116, #ff6a00);
   border-radius: 10px;
@@ -184,9 +182,9 @@ button#addFriend {
 }
 
 .contest-card {
-  animation: pulse-glow 2s infinite; /* This triggers the glow effect */
+  animation: pulse-glow 2s infinite; 
 }
-/* Style for the 'Set LeetCode ID' button when no user is logged in */
+
 #welcomeSection button {
     width: 100%;
     background-color: #ffa116;
